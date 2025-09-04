@@ -1,19 +1,18 @@
+<script lang="ts">
+  import Sidebar from "$lib/components/Sidebar.svelte";
+  import Editor from "$lib/components/Editor.svelte";
+  import { initNotes } from "$lib/stores/notes";
+
+  // Initialize notes on page load
+  initNotes();
+</script>
+
 <svelte:head>
-    <title>notes_frontend</title>
+  <title>NoteEase</title>
+  <meta name="description" content="NoteEase - Minimalistic note taking app" />
 </svelte:head>
 
-<div class="container">
-    <p>notes_frontend is being generated</p>
-</div>
-
-<style>
-    .container {
-        text-align: center;
-    }
-
-    p {
-        margin: 0;
-        font-size: 2rem;
-        color: var(--color-text-primary);
-    }
-</style>
+<Sidebar />
+<main class="main">
+  <Editor />
+</main>
